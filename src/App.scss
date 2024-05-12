@@ -1,0 +1,95 @@
+@import './index.scss';
+
+@mixin btn_hover {
+    border: 1px solid #fff;
+    color: #fff !important;
+    background: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+article {
+    width: clamp(330px, 80vw,400px);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.column {
+    width: 100%;
+    padding: 60px 40px;
+    background: $bright_orange;
+
+    *:not(:last-child) {
+        margin-bottom: 35px;
+    }
+
+    img {
+        display: block;
+        margin-bottom: 15px
+    }
+
+    h2 {
+        @include big_shoulders;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 2.2rem;
+    }
+
+    p {
+        color: $transparent_white;
+        padding-right: 30px;
+        line-height: 1.6rem;
+    }
+
+    a {
+        background: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        display: inline-block;
+        text-transform: capitalize;
+        font-size: .9rem;
+        transition: .3s;
+        border: 1px solid #fff;
+
+        &:hover{
+            @include btn_hover;
+            
+        }
+    }
+
+    &.sedans{
+        background:$bright_orange;
+        a{
+            color: $bright_orange;
+        }
+    }
+    &.suvs{
+        background:$dark_cyan;
+        a{
+            color: $dark_cyan;
+        }
+    }
+    &.luxury{
+        background:$verydark_cyan;
+        a{
+            color: $verydark_cyan;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main{
+        flex-direction: row;
+        justify-content: center;
+        height: 100vh;
+        article{
+            display: flex;
+            width: clamp(700px, 90vw,950px);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+// Lexend Deca - 400 * Big Shoulders - 700
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+$bright_orange: hsl(31, 77%, 52%);
+$dark_cyan: hsl(184, 100%, 22%);
+$verydark_cyan: hsl(179, 100%, 13%);
+$transparent_white : hsla(0, 0%, 100%, 0.75); /* paragraphs */
+$lightgray: hsl(0, 0%, 95%); /* background, headings, buttons */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+@mixin big_shoulders{
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+}
+
+@mixin lexend{
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+
+body{
+  font-size: 15px;
+  @include lexend
+}
